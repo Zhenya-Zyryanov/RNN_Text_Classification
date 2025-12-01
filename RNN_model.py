@@ -64,7 +64,7 @@ class TextDataset(Dataset):
 
 class RNN(nn.Module):
     def __init__(self, vocab_size, embd_dim, rnn_hidden_size, num_classes, num_layers, rnn_type="LSTM",
-                 padding_idx=0,pretrained_embedding=None, freeze_embedding=True, dropout=0.0):
+                 padding_idx=0, pretrained_embedding=None, freeze_embedding=True, dropout=0.0, bidirectional=False):
         super(RNN, self).__init__()
         self.vocab_size = vocab_size
         self.embd_dim = embd_dim
@@ -72,6 +72,7 @@ class RNN(nn.Module):
         self.num_classes = num_classes
         self.num_layers = num_layers
         self.padding_idx = padding_idx
+        self.bidirectional = bidirectional
 
         self.embedding = nn.Embedding(vocab_size, embd_dim, padding_idx=0)
 
@@ -82,26 +83,38 @@ class RNN(nn.Module):
 
         if rnn_type == "LSTM":
             self.rnn = nn.LSTM(embd_dim, rnn_hidden_size, num_layers, batch_first=True,
-                               dropout=dropout if num_layers > 1 else 0)
+                               dropout=dropout if num_layers > 1 else 0, bidirectional=bidirectional)
         elif rnn_type == "GRU":
             self.rnn = nn.GRU(embd_dim, rnn_hidden_size, num_layers, batch_first=True,
-                              dropout=dropout if num_layers > 1 else 0)
+                              dropout=dropout if num_layers > 1 else 0, bidirectional=bidirectional)
         else:
             self.rnn = nn.RNN(embd_dim, rnn_hidden_size, num_layers, batch_first=True,
-                              dropout=dropout if num_layers > 1 else 0)
+                              dropout=dropout if num_layers > 1 else 0, bidirectional=bidirectional)
 
-        self.fc = nn.Linear(rnn_hidden_size, rnn_hidden_size // 2)
-        self.norm = nn.LayerNorm(rnn_hidden_size // 2)
+        linear_input_size = rnn_hidden_size * (2 if bidirectional else 1)
+        
+        self.fc = nn.Linear(linear_input_size, linear_input_size // 2)
+        self.norm = nn.LayerNorm(linear_input_size // 2)
         self.af = nn.LeakyReLU()
-        self.fc2 = nn.Linear(rnn_hidden_size // 2, num_classes)
+        self.fc2 = nn.Linear(linear_input_size // 2, num_classes)
 
     def forward(self, x):
         batch_size, max_len = x.size()
         lens = seq_len(x, max_len, self.padding_idx)
 
         x = self.embedding(x)
-        x, _ = self.rnn(x)
-        final = x[torch.arange(batch_size), lens - 1, :]
+        rnn_out, _ = self.rnn(x)
+        
+        if self.bidirectional:
+            forward_out = rnn_out[:, :, :self.rnn_hidden_size]
+            backward_out = rnn_out[:, :, self.rnn_hidden_size:]
+            
+            forward_final = forward_out[torch.arange(batch_size), lens - 1, :]
+            backward_final = backward_out[torch.arange(batch_size), lens - 1, :]
+            
+            final = torch.cat((forward_final, backward_final), dim=1)
+        else:
+            final = rnn_out[torch.arange(batch_size), lens - 1, :]
 
         out = self.fc(final)
         out = self.af(out)

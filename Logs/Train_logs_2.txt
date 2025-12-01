@@ -1,0 +1,985 @@
+Обучение LSTM сети на 'Определение темы новостей' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 1.66  Acc: 0.42  F1: 0.42                                                                                                                                                    
+ Val loss: 1.61  Acc: 0.46  F1: 0.46
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 1.00  Acc: 0.66  F1: 0.66                                                                                                                                                    
+ Val loss: 1.43  Acc: 0.57  F1: 0.57
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.54  Acc: 0.83  F1: 0.83                                                                                                                                                    
+ Val loss: 1.59  Acc: 0.59  F1: 0.59
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.24  Acc: 0.93  F1: 0.93                                                                                                                                                    
+ Val loss: 1.78  Acc: 0.61  F1: 0.61
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.10  Acc: 0.97  F1: 0.97                                                                                                                                                    
+ Val loss: 2.04  Acc: 0.62  F1: 0.62
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.04  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 2.16  Acc: 0.62  F1: 0.62
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.02  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.27  Acc: 0.62  F1: 0.62
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.02  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.31  Acc: 0.62  F1: 0.62
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.34  Acc: 0.62  F1: 0.62
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.36  Acc: 0.62  F1: 0.62
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.62
+Max accuracy: 0.63, на 15 эпохе
+Max F1: 0.63, на 15 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение LSTM сети на 'Определение темы текста №1' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.38  Acc: 0.89  F1: 0.89                                                                                                                                                    
+ Val loss: 0.41  Acc: 0.88  F1: 0.88
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.25  Acc: 0.93  F1: 0.93                                                                                                                                                    
+ Val loss: 0.41  Acc: 0.90  F1: 0.90
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.14  Acc: 0.97  F1: 0.97                                                                                                                                                    
+ Val loss: 0.42  Acc: 0.90  F1: 0.90
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.08  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 0.41  Acc: 0.91  F1: 0.91
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.06  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 0.65  Acc: 0.89  F1: 0.89
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.02  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.39  Acc: 0.92  F1: 0.92
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.03  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.47  Acc: 0.91  F1: 0.91
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.45  Acc: 0.92  F1: 0.92
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.46  Acc: 0.92  F1: 0.92
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.46  Acc: 0.92  F1: 0.92
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.92
+Max accuracy: 0.92, на 11 эпохе
+Max F1: 0.92, на 11 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение LSTM сети на 'Human vs AI' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.14  Acc: 0.96  F1: 0.96                                                                                                                                                    
+ Val loss: 0.16  Acc: 0.96  F1: 0.96
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.04  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 0.14  Acc: 0.96  F1: 0.96
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.21  Acc: 0.96  F1: 0.96
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.25  Acc: 0.96  F1: 0.96
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.24  Acc: 0.97  F1: 0.97
+
+Эпоха 12/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.25  Acc: 0.97  F1: 0.97
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.26  Acc: 0.97  F1: 0.97
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00 
+ Val loss: 0.27  Acc: 0.97  F1: 0.97
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.27  Acc: 0.97  F1: 0.97
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.28  Acc: 0.97  F1: 0.97
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.97
+Max accuracy: 0.97, на 7 эпохе
+Max F1: 0.97, на 7 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение LSTM сети на 'Определение темы текста №2' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 3.60  Acc: 0.11  F1: 0.11                                                                                                                                                    
+ Val loss: 3.37  Acc: 0.13  F1: 0.13
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 2.66  Acc: 0.26  F1: 0.26                                                                                                                                                    
+ Val loss: 2.90  Acc: 0.25  F1: 0.25
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 1.75  Acc: 0.47  F1: 0.47                                                                                                                                                    
+ Val loss: 2.65  Acc: 0.35  F1: 0.35
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.99  Acc: 0.68  F1: 0.68                                                                                                                                                    
+ Val loss: 2.90  Acc: 0.41  F1: 0.41
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.43  Acc: 0.86  F1: 0.86
+ Val loss: 3.21  Acc: 0.45  F1: 0.45
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.21  Acc: 0.93  F1: 0.93                                                                                                                                                    
+ Val loss: 3.65  Acc: 0.45  F1: 0.45
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.09  Acc: 0.97  F1: 0.97                                                                                                                                                    
+ Val loss: 3.86  Acc: 0.46  F1: 0.46
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.05  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 4.00  Acc: 0.47  F1: 0.47
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.03  Acc: 0.99  F1: 0.99 
+ Val loss: 4.14  Acc: 0.47  F1: 0.47
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.03  Acc: 0.99  F1: 0.99
+ Val loss: 4.20  Acc: 0.47  F1: 0.47
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.47
+Max accuracy: 0.47, на 18 эпохе
+Max F1: 0.47, на 18 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение LSTM сети на 'Политическая предвзятость текста' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.71  Acc: 0.67  F1: 0.67                                                                                                                                                    
+ Val loss: 0.76  Acc: 0.63  F1: 0.63
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.37  Acc: 0.85  F1: 0.85                                                                                                                                                    
+ Val loss: 1.13  Acc: 0.66  F1: 0.66
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.08  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 1.59  Acc: 0.65  F1: 0.65
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.03  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 2.09  Acc: 0.65  F1: 0.65
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.26  Acc: 0.63  F1: 0.63
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.43  Acc: 0.64  F1: 0.64
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.49  Acc: 0.64  F1: 0.64
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.53  Acc: 0.64  F1: 0.64
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.59  Acc: 0.64  F1: 0.64
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.63  Acc: 0.63  F1: 0.63
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.63
+Max accuracy: 0.66, на 4 эпохе
+Max F1: 0.66, на 4 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение GRU сети на 'Анализ настроения текста' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.54  Acc: 0.78  F1: 0.78                                                                                                                                                    
+ Val loss: 0.59  Acc: 0.76  F1: 0.76
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.27  Acc: 0.90  F1: 0.90                                                                                                                                                    
+ Val loss: 0.57  Acc: 0.80  F1: 0.80
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.15  Acc: 0.94  F1: 0.94 
+ Val loss: 0.65  Acc: 0.82  F1: 0.82
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.09  Acc: 0.96  F1: 0.96                                                                                                                                                    
+ Val loss: 0.74  Acc: 0.83  F1: 0.83
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.07  Acc: 0.97  F1: 0.97                                                                                                                                                    
+ Val loss: 0.90  Acc: 0.83  F1: 0.83
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.06  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 0.98  Acc: 0.83  F1: 0.83
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.05  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 1.05  Acc: 0.83  F1: 0.83
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.04  Acc: 0.98  F1: 0.98 
+ Val loss: 1.09  Acc: 0.83  F1: 0.83
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.04  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 1.12  Acc: 0.83  F1: 0.83
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.04  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 1.13  Acc: 0.83  F1: 0.83
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.83
+Max accuracy: 0.83, на 19 эпохе
+Max F1: 0.83, на 19 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение GRU сети на 'Анализ ненависти в тексте' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.34  Acc: 0.86  F1: 0.86                                                                                                                                                    
+ Val loss: 0.48  Acc: 0.77  F1: 0.77
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.13  Acc: 0.96  F1: 0.96                                                                                                                                                    
+ Val loss: 0.46  Acc: 0.83  F1: 0.83
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.05  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 0.48  Acc: 0.87  F1: 0.87
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.02  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 0.77  Acc: 0.83  F1: 0.83
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.88  Acc: 0.82  F1: 0.82
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.97  Acc: 0.81  F1: 0.81
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.03  Acc: 0.82  F1: 0.82
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.13  Acc: 0.81  F1: 0.81
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.14  Acc: 0.81  F1: 0.81
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.13  Acc: 0.81  F1: 0.81
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.81
+Max accuracy: 0.87, на 6 эпохе
+Max F1: 0.87, на 6 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение GRU сети на 'Положительные & Отрицательные отзывы' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.23  Acc: 0.91  F1: 0.91 
+ Val loss: 0.27  Acc: 0.89  F1: 0.89
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.03  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 0.64  Acc: 0.85  F1: 0.85
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.00  Acc: 0.84  F1: 0.84
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.18  Acc: 0.85  F1: 0.85
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.32  Acc: 0.85  F1: 0.85
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.40  Acc: 0.84  F1: 0.84
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.51  Acc: 0.83  F1: 0.83
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.66  Acc: 0.82  F1: 0.82
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.68  Acc: 0.82  F1: 0.82
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.70  Acc: 0.82  F1: 0.82
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.82
+Max accuracy: 0.89, на 2 эпохе
+Max F1: 0.89, на 2 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение GRU сети на 'Определение темы новостей' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 1.45  Acc: 0.52  F1: 0.52                                                                                                                                                    
+ Val loss: 1.54  Acc: 0.51  F1: 0.51
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.61  Acc: 0.81  F1: 0.81                                                                                                                                                    
+ Val loss: 1.29  Acc: 0.65  F1: 0.65
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.19  Acc: 0.95  F1: 0.95                                                                                                                                                    
+ Val loss: 1.69  Acc: 0.64  F1: 0.64
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.04  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 1.85  Acc: 0.65  F1: 0.65
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.90  Acc: 0.67  F1: 0.67
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.90  Acc: 0.68  F1: 0.68
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.99  Acc: 0.67  F1: 0.67
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.98  Acc: 0.68  F1: 0.68
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.02  Acc: 0.68  F1: 0.68
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.03  Acc: 0.68  F1: 0.68
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.68
+Max accuracy: 0.68, на 16 эпохе
+Max F1: 0.68, на 16 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение GRU сети на 'Определение темы текста №1' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.36  Acc: 0.89  F1: 0.89                                                                                                                                                    
+ Val loss: 0.41  Acc: 0.87  F1: 0.87
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.13  Acc: 0.97  F1: 0.97                                                                                                                                                    
+ Val loss: 0.56  Acc: 0.85  F1: 0.85
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.07  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 0.42  Acc: 0.90  F1: 0.90
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.31  Acc: 0.93  F1: 0.93
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.26  Acc: 0.94  F1: 0.94
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.29  Acc: 0.94  F1: 0.94
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.30  Acc: 0.94  F1: 0.94
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.30  Acc: 0.94  F1: 0.94
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.30  Acc: 0.94  F1: 0.94
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.31  Acc: 0.94  F1: 0.94
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.94
+Max accuracy: 0.94, на 10 эпохе
+Max F1: 0.94, на 10 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение GRU сети на 'Human vs AI' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.06  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 0.11  Acc: 0.97  F1: 0.97
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.10  Acc: 0.98  F1: 0.98
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00 
+ Val loss: 0.10  Acc: 0.98  F1: 0.98
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.11  Acc: 0.98  F1: 0.98
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.12  Acc: 0.98  F1: 0.98
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.13  Acc: 0.98  F1: 0.98
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.13  Acc: 0.98  F1: 0.98
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.14  Acc: 0.98  F1: 0.98
+
+Эпоха 18/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.14  Acc: 0.98  F1: 0.98
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00
+ Val loss: 0.14  Acc: 0.98  F1: 0.98
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.98
+Max accuracy: 0.98, на 19 эпохе
+Max F1: 0.98, на 19 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение GRU сети на 'Определение темы текста №2' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 2.97  Acc: 0.24  F1: 0.24                                                                                                                                                    
+ Val loss: 2.72  Acc: 0.31  F1: 0.31
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 1.24  Acc: 0.65  F1: 0.65                                                                                                                                                    
+ Val loss: 2.24  Acc: 0.47  F1: 0.47
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.34  Acc: 0.90  F1: 0.90                                                                                                                                                    
+ Val loss: 2.80  Acc: 0.50  F1: 0.50
+
+Эпоха 8/20
+Train loss: 0.06  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 3.27  Acc: 0.49  F1: 0.49
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.02  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 3.48  Acc: 0.51  F1: 0.51
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.02  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 3.58  Acc: 0.50  F1: 0.50
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 3.57  Acc: 0.51  F1: 0.51
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 3.61  Acc: 0.51  F1: 0.51
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 3.66  Acc: 0.51  F1: 0.51
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 3.68  Acc: 0.51  F1: 0.51
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.51
+Max accuracy: 0.52, на 7 эпохе
+Max F1: 0.52, на 7 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение GRU сети на 'Политическая предвзятость текста' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.71  Acc: 0.68  F1: 0.68                                                                                                                                                    
+ Val loss: 0.76  Acc: 0.67  F1: 0.67
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.29  Acc: 0.90  F1: 0.90                                                                                                                                                    
+ Val loss: 0.92  Acc: 0.66  F1: 0.66
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.03  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 1.53  Acc: 0.68  F1: 0.68
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.79  Acc: 0.69  F1: 0.69
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.83  Acc: 0.69  F1: 0.69
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.94  Acc: 0.69  F1: 0.69
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.00  Acc: 0.70  F1: 0.70
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 1.99  Acc: 0.69  F1: 0.69
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.02  Acc: 0.69  F1: 0.69
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.04  Acc: 0.69  F1: 0.69
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.69
+Max accuracy: 0.70, на 5 эпохе
+Max F1: 0.70, на 5 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение RNN сети на 'Анализ настроения текста' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.70  Acc: 0.71  F1: 0.71                                                                                                                                                    
+ Val loss: 0.69  Acc: 0.71  F1: 0.71
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.44  Acc: 0.84  F1: 0.84                                                                                                                                                    
+ Val loss: 0.62  Acc: 0.77  F1: 0.77
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.31  Acc: 0.89  F1: 0.89                                                                                                                                                    
+ Val loss: 0.60  Acc: 0.79  F1: 0.79
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.23  Acc: 0.92  F1: 0.92 
+ Val loss: 0.73  Acc: 0.79  F1: 0.79
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.15  Acc: 0.95  F1: 0.95 
+ Val loss: 0.73  Acc: 0.80  F1: 0.80
+
+Эпоха 12/20
+Train loss: 0.12  Acc: 0.96  F1: 0.96                                                                                                                                                    
+ Val loss: 0.80  Acc: 0.80  F1: 0.80
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.09  Acc: 0.97  F1: 0.97                                                                                                                                                    
+ Val loss: 0.91  Acc: 0.80  F1: 0.80
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.07  Acc: 0.97  F1: 0.97                                                                                                                                                    
+ Val loss: 0.95  Acc: 0.80  F1: 0.80
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.06  Acc: 0.98  F1: 0.98 
+ Val loss: 1.02  Acc: 0.80  F1: 0.80
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.06  Acc: 0.98  F1: 0.98 
+ Val loss: 1.05  Acc: 0.80  F1: 0.80
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.80
+Max accuracy: 0.81, на 13 эпохе
+Max F1: 0.81, на 13 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение RNN сети на 'Анализ ненависти в тексте' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.39  Acc: 0.84  F1: 0.84                                                                                                                                                    
+ Val loss: 0.38  Acc: 0.84  F1: 0.84
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.17  Acc: 0.94  F1: 0.94                                                                                                                                                    
+ Val loss: 0.47  Acc: 0.86  F1: 0.86
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.08  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 0.49  Acc: 0.88  F1: 0.88
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.04  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 0.56  Acc: 0.88  F1: 0.88
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.02  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.65  Acc: 0.88  F1: 0.88
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.02  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.65  Acc: 0.87  F1: 0.87
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.68  Acc: 0.88  F1: 0.88
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.74  Acc: 0.87  F1: 0.87
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.77  Acc: 0.87  F1: 0.87
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.78  Acc: 0.87  F1: 0.87
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.87
+Max accuracy: 0.88, на 7 эпохе
+Max F1: 0.88, на 7 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение RNN сети на 'Положительные & Отрицательные отзывы' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.46  Acc: 0.79  F1: 0.79                                                                                                                                                    
+ Val loss: 0.51  Acc: 0.80  F1: 0.80
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.30  Acc: 0.89  F1: 0.89                                                                                                                                                    
+ Val loss: 0.45  Acc: 0.81  F1: 0.81
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.23  Acc: 0.92  F1: 0.92                                                                                                                                                    
+ Val loss: 0.49  Acc: 0.83  F1: 0.83
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.15  Acc: 0.95  F1: 0.95                                                                                                                                                    
+ Val loss: 0.47  Acc: 0.83  F1: 0.83
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.11  Acc: 0.97  F1: 0.97                                                                                                                                                    
+ Val loss: 0.54  Acc: 0.82  F1: 0.82
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.08  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 0.62  Acc: 0.82  F1: 0.82
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.06  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 0.67  Acc: 0.82  F1: 0.82
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.06  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 0.68  Acc: 0.82  F1: 0.82
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.05  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 0.74  Acc: 0.82  F1: 0.82
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.04  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 0.76  Acc: 0.82  F1: 0.82
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.82
+Max accuracy: 0.83, на 6 эпохе
+Max F1: 0.83, на 6 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение RNN сети на 'Определение темы новостей' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 2.28  Acc: 0.23  F1: 0.23                                                                                                                                                    
+ Val loss: 2.26  Acc: 0.25  F1: 0.25
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 1.71  Acc: 0.42  F1: 0.42                                                                                                                                                    
+ Val loss: 2.05  Acc: 0.35  F1: 0.35
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 1.19  Acc: 0.59  F1: 0.59                                                                                                                                                    
+ Val loss: 2.20  Acc: 0.36  F1: 0.36
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.75  Acc: 0.76  F1: 0.76                                                                                                                                                    
+ Val loss: 2.18  Acc: 0.40  F1: 0.40
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.46  Acc: 0.86  F1: 0.86                                                                                                                                                    
+ Val loss: 2.27  Acc: 0.42  F1: 0.42
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.34  Acc: 0.90  F1: 0.90                                                                                                                                                    
+ Val loss: 2.43  Acc: 0.43  F1: 0.43
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.25  Acc: 0.93  F1: 0.93                                                                                                                                                    
+ Val loss: 2.53  Acc: 0.43  F1: 0.43
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.20  Acc: 0.95  F1: 0.95                                                                                                                                                    
+ Val loss: 2.59  Acc: 0.44  F1: 0.44
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.17  Acc: 0.95  F1: 0.95                                                                                                                                                    
+ Val loss: 2.64  Acc: 0.45  F1: 0.45
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.16  Acc: 0.96  F1: 0.96                                                                                                                                                    
+ Val loss: 2.67  Acc: 0.44  F1: 0.44
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.44
+Max accuracy: 0.45, на 18 эпохе
+Max F1: 0.45, на 18 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение RNN сети на 'Определение темы текста №1' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.69  Acc: 0.78  F1: 0.78                                                                                                                                                    
+ Val loss: 0.65  Acc: 0.80  F1: 0.80
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.44  Acc: 0.86  F1: 0.86                                                                                                                                                    
+ Val loss: 0.57  Acc: 0.85  F1: 0.85
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.27  Acc: 0.92  F1: 0.92                                                                                                                                                    
+ Val loss: 0.59  Acc: 0.86  F1: 0.86
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.13  Acc: 0.97  F1: 0.97                                                                                                                                                    
+ Val loss: 0.52  Acc: 0.88  F1: 0.88
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.08  Acc: 0.98  F1: 0.98                                                                                                                                                    
+ Val loss: 0.47  Acc: 0.89  F1: 0.89
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.04  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 0.51  Acc: 0.89  F1: 0.89
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.03  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.54  Acc: 0.88  F1: 0.88
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.02  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.55  Acc: 0.88  F1: 0.88
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.02  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.53  Acc: 0.88  F1: 0.88
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.02  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.54  Acc: 0.88  F1: 0.88
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.88
+Max accuracy: 0.89, на 10 эпохе
+Max F1: 0.89, на 10 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение RNN сети на 'Human vs AI' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.34  Acc: 0.88  F1: 0.88                                                                                                                                                    
+ Val loss: 0.32  Acc: 0.88  F1: 0.88
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.17  Acc: 0.95  F1: 0.95                                                                                                                                                    
+ Val loss: 0.27  Acc: 0.93  F1: 0.93
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.11  Acc: 0.97  F1: 0.97                                                                                                                                                    
+ Val loss: 0.30  Acc: 0.91  F1: 0.91
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.05  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 0.29  Acc: 0.92  F1: 0.92
+
+Эпоха 10/20
+Train loss: 0.03  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 0.29  Acc: 0.93  F1: 0.93
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.37  Acc: 0.92  F1: 0.92
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.38  Acc: 0.93  F1: 0.93
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.41  Acc: 0.93  F1: 0.93
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.42  Acc: 0.93  F1: 0.93
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.00  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 0.40  Acc: 0.93  F1: 0.93
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.93
+Max accuracy: 0.93, на 14 эпохе
+Max F1: 0.93, на 14 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение RNN сети на 'Определение темы текста №2' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 4.13  Acc: 0.06  F1: 0.06                                                                                                                                                    
+ Val loss: 4.01  Acc: 0.09  F1: 0.09
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 3.54  Acc: 0.12  F1: 0.12                                                                                                                                                    
+ Val loss: 3.71  Acc: 0.11  F1: 0.11
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 3.00  Acc: 0.19  F1: 0.19                                                                                                                                                    
+ Val loss: 3.78  Acc: 0.13  F1: 0.13
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 2.22  Acc: 0.35  F1: 0.35                                                                                                                                                    
+ Val loss: 3.89  Acc: 0.15  F1: 0.15
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 1.78  Acc: 0.44  F1: 0.44                                                                                                                                                    
+ Val loss: 4.24  Acc: 0.16  F1: 0.16
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 1.42  Acc: 0.54  F1: 0.54                                                                                                                                                    
+ Val loss: 4.35  Acc: 0.17  F1: 0.17
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 1.19  Acc: 0.60  F1: 0.60                                                                                                                                                    
+ Val loss: 4.51  Acc: 0.18  F1: 0.18
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 1.09  Acc: 0.63  F1: 0.63 
+ Val loss: 4.61  Acc: 0.19  F1: 0.19
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 1.00  Acc: 0.66  F1: 0.66                                                                                                                                                    
+ Val loss: 4.65  Acc: 0.19  F1: 0.19
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.94  Acc: 0.68  F1: 0.68                                                                                                                                                    
+ Val loss: 4.69  Acc: 0.19  F1: 0.19
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.19
+Max accuracy: 0.19, на 20 эпохе
+Max F1: 0.19, на 20 эпохе
+c:\Users\Саша\Desktop\Учеба\zhenya_works\RNN_Text_classification\Train_RNNs.py:139: DeprecationWarning: Call to deprecated `glove2word2vec` (KeyedVectors.load_word2vec_format(.., binary=False, no_header=True) loads GLoVE text vectors.).
+  glove2word2vec(glove_input, glove_word2vec_file)
+Обучение RNN сети на 'Политическая предвзятость текста' датасете
+                                                                                                                                                                                         
+Эпоха 2/20
+Train loss: 0.77  Acc: 0.64  F1: 0.64                                                                                                                                                    
+ Val loss: 0.80  Acc: 0.62  F1: 0.62
+                                                                                                                                                                                         
+Эпоха 4/20
+Train loss: 0.54  Acc: 0.77  F1: 0.77                                                                                                                                                    
+ Val loss: 0.85  Acc: 0.59  F1: 0.59
+                                                                                                                                                                                         
+Эпоха 6/20
+Train loss: 0.21  Acc: 0.92  F1: 0.92                                                                                                                                                    
+ Val loss: 1.45  Acc: 0.59  F1: 0.59
+                                                                                                                                                                                         
+Эпоха 8/20
+Train loss: 0.09  Acc: 0.97  F1: 0.97                                                                                                                                                    
+ Val loss: 1.93  Acc: 0.60  F1: 0.60
+                                                                                                                                                                                         
+Эпоха 10/20
+Train loss: 0.03  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 2.34  Acc: 0.60  F1: 0.60
+                                                                                                                                                                                         
+Эпоха 12/20
+Train loss: 0.02  Acc: 0.99  F1: 0.99                                                                                                                                                    
+ Val loss: 2.49  Acc: 0.60  F1: 0.60
+                                                                                                                                                                                         
+Эпоха 14/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00
+ Val loss: 2.62  Acc: 0.60  F1: 0.60
+                                                                                                                                                                                         
+Эпоха 16/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.68  Acc: 0.60  F1: 0.60
+                                                                                                                                                                                         
+Эпоха 18/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.76  Acc: 0.61  F1: 0.61
+                                                                                                                                                                                         
+Эпоха 20/20
+Train loss: 0.01  Acc: 1.00  F1: 1.00                                                                                                                                                    
+ Val loss: 2.81  Acc: 0.61  F1: 0.61
+Результаты итоговой валидации:                                                                                                                                                           
+Accuracy: 0.61
+Max accuracy: 0.62, на 1 эпохе
+Max F1: 0.62, на 1 эпохе

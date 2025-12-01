@@ -36,28 +36,23 @@ rnn_df.index.name = "Датасет"
 global_accuracy = []
 global_f1_score = []
 rnn_types = ["LSTM", "GRU", "RNN"]
-datasets = [("hf://datasets/prasadsawant7/sentiment_analysis_preprocessed_dataset/sentiment_analysis_train.csv", "text", "labels", "Анализ настроения текста"),  # 13 mult 56k
-            ("hf://datasets/mediabiasgroup/mbib-base/mbib-aggregated/racial-bias.csv", "text", "label", "Определение расизма текста"),  # 13 bin
-            ("hf://datasets/jahjinx/IMDb_movie_reviews/IMDB_train.csv", "text", "label", "Положительные/Отрицательные отзывы"), # 118 bin
+datasets = [("hf://datasets/architrawat25/Balanced_hate_speech18/balanced_dataset.csv", "text", "label", "Анализ ненависти в тексте"),  # 13 bin
+            ("hf://datasets/jahjinx/IMDb_movie_reviews/IMDB_train.csv", "text", "label", "Положительные & Отрицательные отзывы"), # 118 bin
             ("hf://datasets/galileo-ai/20_Newsgroups_Fixed/train.csv", "text", "label", "Определение темы новостей"),  # 118 mult 10k
             ("Datasets/Text Multiclassification.csv", "Text", "Label", "Определение темы текста №1"),  # 219 mult
             ("hf://datasets/Ateeqq/AI-and-Human-Generated-Text/train.csv", "abstract", "label", "Human vs AI"), # 120 bin 21k
             ("hf://datasets/valurank/Topic_Classification/topic_classification.csv", "article_text", "topic", "Определение темы текста №2" ), # 462 mult 22k
             ("hf://datasets/Faith1712/Allsides_political_bias_proper/allsides_data_unstructured.zip", "text", "label", "Политическая предвзятость текста")]  # 488 mul 11k
 for rnn_type in rnn_types:
-    for dataset in datasets:
-        df = pd.read_csv(dataset[0])
-        feature = dataset[1]
-        target = dataset[2]
-
-
-        df = df.dropna(subset=[target])
-        train_df, test_df = train_test_split(df, test_size=0.33, random_state=42, stratify=df[target])
+    for dataset , text, label, name in datasets:
+        df = pd.read_csv(dataset)
+        df = df.dropna(subset=[label])
+        train_df, test_df = train_test_split(df, test_size=0.33, random_state=42, stratify=df[label])
 
         le = LabelEncoder()
-        le.fit(train_df[target].values)
+        le.fit(train_df[label].values)
 
-        train_texts = train_df[feature].fillna("").values
+        train_texts = train_df[text].fillna("").values
         train_cleaned = [clean_text(t) for t in train_texts]
         train_tokenized = [tokenize(t) for t in train_cleaned]
         all_tokens = [tok for doc in train_tokenized for tok in doc]
@@ -76,12 +71,12 @@ for rnn_type in rnn_types:
             max_len = 15
 
 
-        train_ds = TextDataset(train_df[feature].fillna("").values,
-                               train_df[target].values,
+        train_ds = TextDataset(train_df[text].fillna("").values,
+                               train_df[label].values,
                                word2idx, le, max_len)
 
-        test_ds = TextDataset(test_df[feature].fillna("").values,
-                              test_df[target].values,
+        test_ds = TextDataset(test_df[text].fillna("").values,
+                              test_df[label].values,
                               word2idx, le, max_len)
 
         num_classes = len(le.classes_)
@@ -113,7 +108,7 @@ for rnn_type in rnn_types:
 
         plt.xlabel('Длина последовательности')
         plt.ylabel('Количество')
-        plt.title(f'Распределение датасета "{dataset[3]}"')
+        plt.title(f'Распределение датасета "{name}"')
         plt.legend()
 
         stats_text = f'Общее количество: {len(lengths_stat)}\nMin: {min(lengths_stat)}\nMax: {max(lengths_stat)}'
@@ -124,7 +119,7 @@ for rnn_type in rnn_types:
         plt.legend(loc='upper left', bbox_to_anchor=(0.543, 0.83))
 
         plt.tight_layout()
-        plt.savefig(f"Datasets_Distribution/{dataset[3]}.png")
+        plt.savefig(f"Datasets_Distribution/{name}.png")
 
 
         batch_size = 32
@@ -133,9 +128,9 @@ for rnn_type in rnn_types:
 
         embd_dim = 100
         lr = 1e-3
-        rnn_hidden_size = 256
-        num_layers = 4
-        num_epochs = 20
+        rnn_hidden_size = 64
+        num_layers = 2
+        num_epochs = 10
 
 
         glove_input = "glove.6B.100d.txt"
@@ -153,7 +148,8 @@ for rnn_type in rnn_types:
 
 
         model = RNN(vocab_size, embd_dim, rnn_hidden_size, num_classes, num_layers, rnn_type=rnn_type,
-                    pretrained_embedding=embedding_matrix_tensor, freeze_embedding=False, padding_idx=word2idx['<PAD>'])
+                    pretrained_embedding=embedding_matrix_tensor, freeze_embedding=False,
+                    padding_idx=word2idx['<PAD>'], dropout=0.4, bidirectional=True)
         model.to(device)
 
         all_train_labels = []
@@ -176,10 +172,9 @@ for rnn_type in rnn_types:
         val_accuracies = []
         val_f1s = []
 
-        print(f"Обучение {rnn_type} сети на '{dataset}' датасете")
+        print(f"Обучение {rnn_type} сети на '{name}' датасете")
         for epoch in range(1, num_epochs + 1):
-            if epoch % 3 == 0:
-                print(f"\nЭпоха {epoch}/{num_epochs}")
+            print(f"\nЭпоха {epoch}/{num_epochs}")
 
             model.train()
             train_loss_sum = 0.0
@@ -234,9 +229,8 @@ for rnn_type in rnn_types:
 
             scheduler.step(val_losses[-1])
 
-            if epoch % 3 == 0:
-                print(f"Train loss: {train_losses[-1]:.2f}  Acc: {train_accuracies[-1]:.2f}  F1: {train_f1s[-1]:.2f} \n"
-                      f" Val loss: {val_losses[-1]:.2f}  Acc: {val_accuracies[-1]:.2f}  F1: {val_f1s[-1]:.2f}")
+            print(f"Train loss: {train_losses[-1]:.2f}  Acc: {train_accuracies[-1]:.2f}  F1: {train_f1s[-1]:.2f} \n"
+                  f" Val loss: {val_losses[-1]:.2f}  Acc: {val_accuracies[-1]:.2f}  F1: {val_f1s[-1]:.2f}")
 
         all_preds = []
         all_labels = []
@@ -253,8 +247,8 @@ for rnn_type in rnn_types:
         print(f"Accuracy: {accuracy_score(all_labels, all_preds):.2f}")
         print(f"Max accuracy: {np.max(val_accuracies):.2f}, на {np.argmax(val_accuracies) + 1} эпохе")
         print(f"Max F1: {np.max(val_f1s):.2f}, на {np.argmax(val_f1s) + 1} эпохе")
-        print("\nClassification Report:")
-        print(classification_report(all_labels, all_preds, zero_division=0), '\n')
+        """print("\nClassification Report:")
+        print(classification_report(all_labels, all_preds, zero_division=0), '\n')"""
         plt.figure(figsize=(13, 4))
 
         plt.subplot(1, 2, 1)
@@ -262,6 +256,7 @@ for rnn_type in rnn_types:
         plt.plot(val_losses, label='Validation Loss')
         plt.xlabel('Эпоха')
         plt.ylabel('Loss')
+        plt.grid(axis='y', color='grey', linestyle='--', linewidth=0.65)
         plt.legend()
 
         epochs = len(train_losses)
@@ -275,22 +270,22 @@ for rnn_type in rnn_types:
         plt.xlabel('Эпоха')
         plt.ylabel('Accuracy and F1')
         plt.legend()
-
+        plt.grid(axis='y', color='grey', linestyle='--', linewidth=0.65)
         plt.xticks(range(0, epochs, 1), range(1, epochs + 1, 1))
 
-        plt.suptitle(f'{rnn_type} на "{dataset[3]}"')
+        plt.suptitle(f'{rnn_type}_bindir на "{name}"')
         plt.tight_layout()
-        plt.savefig(f"Data_Metrics/{rnn_type} сеть на  {dataset[3]}.png")
+        plt.savefig(f"Data_Metrics/{rnn_type}_bidirectional сеть на  {name}.png")
+        plt.close('all')
 
         if rnn_type == 'LSTM':
-            lstm_df.loc[f"{dataset[3]}"] = [val_accuracies[-1], val_f1s[-1], mean, num_classes, num_epochs]
+            lstm_df.loc[f"{name}"] = [val_accuracies[-1], val_f1s[-1], mean, num_classes, num_epochs]
         elif rnn_type == 'GRU':
-            gru_df.loc[f"{dataset[3]}"] = [val_accuracies[-1], val_f1s[-1], mean, num_classes, num_epochs]
+            gru_df.loc[f"{name}"] = [val_accuracies[-1], val_f1s[-1], mean, num_classes, num_epochs]
         else:
-            rnn_df.loc[f"{dataset[3]}"] = [val_accuracies[-1], val_f1s[-1], mean, num_classes, num_epochs]
+            rnn_df.loc[f"{name}"] = [val_accuracies[-1], val_f1s[-1], mean, num_classes, num_epochs]
 
-        torch.save(model.state_dict(), f"Saved_Weights_Models/{rnn_type}-net_{dataset[3]}.pth")
 
-lstm_df.to_csv("LSTM_metrics.csv", index=True)
-rnn_df.to_csv("RNN_metrics.csv", index=True)
-gru_df.to_csv("GRU_metrics.csv", index=True)
+lstm_df.to_csv("LSTM_metrics_bidirectional.csv", index=True)
+rnn_df.to_csv("RNN_metrics_bidirectional.csv", index=True)
+gru_df.to_csv("GRU_metrics_bidirectional.csv", index=True)
